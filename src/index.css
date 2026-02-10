@@ -1,0 +1,108 @@
+﻿@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendardvariable.css");
+@import "tailwindcss";
+
+@theme {
+  --font-sans:
+    "Pretendard Variable", "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo",
+    "Malgun Gothic", sans-serif;
+
+  --color-primary-500: #4269e9;
+  --color-primary-400: #799bf4;
+  --color-primary-300: #b5cafb;
+  --color-primary-200: #dfe8fe;
+  --color-primary-100: #f4f7ff;
+
+  --color-gray-500: #18191d;
+  --color-gray-400: #444a53;
+  --color-gray-300: #7b818c;
+  --color-gray-200: #cbd0d6;
+  --color-gray-100: #eceff2;
+  --color-white: #ffffff;
+
+  --text-h1: 48px;
+  --text-h1--line-height: 1.4;
+  --text-h1--font-weight: 700;
+  --text-h1--letter-spacing: 0;
+
+  --text-h2: 36px;
+  --text-h2--line-height: 1.4;
+  --text-h2--font-weight: 600;
+  --text-h2--letter-spacing: 0;
+
+  --text-h3: 28px;
+  --text-h3--line-height: 1.4;
+  --text-h3--font-weight: 600;
+  --text-h3--letter-spacing: 0;
+
+  --text-h4: 24px;
+  --text-h4--line-height: 1.4;
+  --text-h4--font-weight: 600;
+  --text-h4--letter-spacing: 0;
+
+  --text-body1: 20px;
+  --text-body1--line-height: 1.4;
+  --text-body1--font-weight: 600;
+  --text-body1--letter-spacing: 0;
+
+  --text-body2: 16px;
+  --text-body2--line-height: 1.4;
+  --text-body2--font-weight: 600;
+  --text-body2--letter-spacing: 0;
+
+  --text-caption: 14px;
+  --text-caption--line-height: 1.4;
+  --text-caption--font-weight: 600;
+  --text-caption--letter-spacing: 0;
+
+  --spacing-grid-gutter: 1.5rem;
+  --spacing-grid-margin: 5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-100 text-gray-500 antialiased;
+  }
+}
+
+@utility layout-desktop {
+  width: min(100%, 1440px);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 5vw, var(--spacing-grid-margin));
+}
+
+@utility grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--spacing-grid-gutter);
+}
+
+@layer components {
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  @keyframes bounce-right {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(12px);
+    }
+  }
+
+  .animate-bounce-right {
+    animation: bounce-right 1.2s infinite ease-in-out;
+  }
+}
