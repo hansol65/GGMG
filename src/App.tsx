@@ -1,10 +1,14 @@
 import { useEffect } from "react";
 import SiteHeader from "./components/landing/SiteHeader";
 import HeroSection from "./components/landing/HeroSection";
-import USPSection from "./components/landing/USPSection";
+import USPSection1 from "./components/landing/USPSection1";
+import USPSection2 from "./components/landing/USPSection2";
+import USPSection3 from "./components/landing/USPSection3";
+import USPSection4 from "./components/landing/USPSection4";
+import USPSection5 from "./components/landing/USPSection5";
+import USPSection6 from "./components/landing/USPSection6";
 import ProcessSection from "./components/landing/ProcessSection";
 import PricingSection from "./components/landing/PricingSection";
-import ReviewsSection from "./components/landing/ReviewsSection";
 import ContactCtaSection from "./components/landing/ContactCtaSection";
 import SiteFooter from "./components/landing/SiteFooter";
 import MetricsSection from "./components/landing/MetricsSection";
@@ -30,15 +34,19 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-500">
+    <div className="min-h-screen">
       <SiteHeader />
       <main>
         <HeroSection />
         <MetricsSection />
-        <USPSection />
+        <USPSection1 />
+        <USPSection2 />
+        <USPSection3 />
+        <USPSection4 />
+        <USPSection5 />
+        <USPSection6 />
         <ProcessSection />
         <PricingSection />
-        <ReviewsSection />
         <ContactCtaSection />
       </main>
       <SiteFooter />

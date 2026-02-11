@@ -1,13 +1,44 @@
 import heroBackground from "../../assets/image-background.png";
 import ArrowDown from "../../assets/icon-arrow-down.svg";
+import IconFace1 from "../../assets/icon-face-1.png";
+import IconFace2 from "../../assets/icon-face-2.png";
+import IconFace3 from "../../assets/icon-face-3.png";
+import IconFace4 from "../../assets/icon-face-4.png";
+import IconFace5 from "../../assets/icon-face-5.png";
+import IconFace6 from "../../assets/icon-face-6.png";
 
 export default function HeroSection() {
   const cards = [
-    ["채용 공고는 계속 올리는데", "지원자가 없어요"],
-    ["동남아 시장 이해도가", "높은 인재를 찾고 싶어요"],
-    ["당장 업무 시간이 필요한데", "채용 프로세스가 너무 길어요"],
-    ["면접은 봤는데", "합류까지 이어지지 않아요"],
-    ["인건비 부담 없이", "빠르게 시작하고 싶어요"],
+    {
+      icon: IconFace1,
+      line1: "채용 공고는 계속 올리는데",
+      line2: "지원자가 없어요",
+    },
+    {
+      icon: IconFace4,
+      line1: "동남아 시장 이해도가",
+      line2: "높은 인재를 찾고 싶어요",
+    },
+    {
+      icon: IconFace2,
+      line1: "당장 일할 사람이 필요한데",
+      line2: "채용 프로세스가 너무 길어요",
+    },
+    {
+      icon: IconFace6,
+      line1: "채용 시간이나 리스크를",
+      line2: "줄이고 싶어요",
+    },
+    {
+      icon: IconFace5,
+      line1: "해외 인재를 쓰고 싶지만",
+      line2: "외주처럼 운영하고 싶진 않아요",
+    },
+    {
+      icon: IconFace3,
+      line1: "좋은 인재를 뽑고 싶은데",
+      line2: "연봉이 감당이 안돼요",
+    },
   ];
 
   return (
@@ -41,7 +72,7 @@ export default function HeroSection() {
       </div>
 
       {/* 화살표 */}
-      <div className="mt-[160px] flex justify-center">
+      <div className="my-[200px] flex justify-center">
         <img src={ArrowDown} className="animate-bounce" />
       </div>
 
@@ -59,14 +90,17 @@ export default function HeroSection() {
         {/* 롤링 카드 */}
         <div className="mt-12 overflow-hidden">
           <div className="flex w-max animate-marquee">
-            {[...cards, ...cards].map(([title, desc], i) => (
+            {[...cards, ...cards].map((card, i) => (
               <div
                 key={i}
-                className="w-[320px] shrink-0 rounded-2xl bg-white/5 border border-white/10 p-8 min-h-[180px] flex flex-col items-center justify-center text-center mr-6"
+                className="mr-6 flex min-h-[192px] w-[325px] shrink-0 flex-col items-center justify-center gap-4 rounded-t-2xl bg-[linear-gradient(180deg,#282B30_0%,rgba(24,25,29,0)_100%)] p-7 text-center backdrop-blur-[2px]"
               >
-                <div className="h-10 w-10 rounded-full bg-white/10 mb-4" />
-                <p className="text-body2 text-gray-100">{title}</p>
-                <p className="mt-2 text-body2 font-bold">{desc}</p>
+                <img src={card.icon} className="h-16 w-16 object-contain" />
+                <p className="text-body1 text-gray-200">
+                  {card.line1}
+                  <br />
+                  {card.line2}
+                </p>
               </div>
             ))}
           </div>
