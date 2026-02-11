@@ -5,7 +5,7 @@ import Say3 from "../../assets/image-say-3.png";
 export default function MetricsSection() {
   return (
     <section className="relative bg-[linear-gradient(180deg,#FFFFFF_0%,#ECEFF2_100%)]">
-      <div className="w-full px-[189px] pb-[120px] pt-[200px]">
+      <div className="mx-auto w-full max-w-[1440px] px-6 py-16 md:px-12 md:py-24 xl:min-h-[1024px] xl:px-[189px] xl:pb-[120px] xl:pt-[200px]">
         <div className="flex items-start">
           <div className="reveal mr-[152px] whitespace-nowrap" data-reveal>
             <h2 className="text-h2 leading-tight text-gray-500">

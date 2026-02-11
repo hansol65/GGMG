@@ -43,7 +43,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative w-full text-white flex flex-col items-center bg-top bg-no-repeat bg-cover"
+      className="hero-section relative w-full text-white flex flex-col items-center bg-top bg-no-repeat bg-cover"
       style={{ backgroundImage: `url(${heroBackground})` }}
     >
       {/* --- HERO 콘텐츠 영역 --- */}
@@ -77,7 +77,7 @@ export default function HeroSection() {
       </div>
 
       {/* --- Painpoint 영역 --- */}
-      <div className="layout-desktop pt-[40px] pb-[200px]">
+      <div className="layout-desktop pt-[40px] ">
         <div className="mx-auto text-center">
           <h2
             className="reveal text-h2 font-bold whitespace-nowrap"
@@ -104,6 +104,14 @@ export default function HeroSection() {
               </div>
             ))}
           </div>
+          <h4
+            className="reveal mx-auto py-20 text-center text-h4 text-white whitespace-nowrap"
+            data-reveal
+          >
+            리스크를 줄이고, 성과는 높이는
+            <br />
+            합리적인 채용 방식이 준비되어 있습니다
+          </h4>
         </div>
       </div>
     </section>
