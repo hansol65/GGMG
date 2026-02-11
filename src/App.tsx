@@ -1,17 +1,16 @@
 import { useEffect } from "react";
 import SiteHeader from "./components/landing/SiteHeader";
 import HeroSection from "./components/landing/HeroSection";
-// import MetrixSection from "./components/landing/MetrixSection";
 import USPSection from "./components/landing/USPSection";
 import ProcessSection from "./components/landing/ProcessSection";
 import PricingSection from "./components/landing/PricingSection";
 import ReviewsSection from "./components/landing/ReviewsSection";
 import ContactCtaSection from "./components/landing/ContactCtaSection";
 import SiteFooter from "./components/landing/SiteFooter";
+import MetricsSection from "./components/landing/MetricsSection";
 
 function App() {
   useEffect(() => {
-    // [data-reveal] 속성을 가진 모든 요소를 찾아서 스크롤 감시
     const elements = document.querySelectorAll<HTMLElement>("[data-reveal]");
 
     const observer = new IntersectionObserver(
@@ -35,7 +34,7 @@ function App() {
       <SiteHeader />
       <main>
         <HeroSection />
-        {/* <MetrixSection /> */}
+        <MetricsSection />
         <USPSection />
         <ProcessSection />
         <PricingSection />

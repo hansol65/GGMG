@@ -2,6 +2,14 @@ import heroBackground from "../../assets/image-background.png";
 import ArrowDown from "../../assets/icon-arrow-down.svg";
 
 export default function HeroSection() {
+  const cards = [
+    ["채용 공고는 계속 올리는데", "지원자가 없어요"],
+    ["동남아 시장 이해도가", "높은 인재를 찾고 싶어요"],
+    ["당장 업무 시간이 필요한데", "채용 프로세스가 너무 길어요"],
+    ["면접은 봤는데", "합류까지 이어지지 않아요"],
+    ["인건비 부담 없이", "빠르게 시작하고 싶어요"],
+  ];
+
   return (
     <section
       className="relative w-full text-white flex flex-col items-center bg-top bg-no-repeat bg-cover"
@@ -37,7 +45,7 @@ export default function HeroSection() {
         <img src={ArrowDown} className="animate-bounce" />
       </div>
 
-      {/* --- METRIX 영역 --- */}
+      {/* --- Painpoint 영역 --- */}
       <div className="layout-desktop pt-[40px] pb-[200px]">
         <div className="mx-auto text-center">
           <h2
@@ -46,6 +54,22 @@ export default function HeroSection() {
           >
             좋은 인재, 왜 이렇게 안 보일까요?
           </h2>
+        </div>
+
+        {/* 롤링 카드 */}
+        <div className="mt-12 overflow-hidden">
+          <div className="flex w-max animate-marquee">
+            {[...cards, ...cards].map(([title, desc], i) => (
+              <div
+                key={i}
+                className="w-[320px] shrink-0 rounded-2xl bg-white/5 border border-white/10 p-8 min-h-[180px] flex flex-col items-center justify-center text-center mr-6"
+              >
+                <div className="h-10 w-10 rounded-full bg-white/10 mb-4" />
+                <p className="text-body2 text-gray-100">{title}</p>
+                <p className="mt-2 text-body2 font-bold">{desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
