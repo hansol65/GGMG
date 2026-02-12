@@ -63,6 +63,12 @@
     @apply bg-gray-100 text-gray-500 antialiased;
   }
 
+  html,
+  body,
+  #root {
+    overflow-x: hidden;
+  }
+
   main > section {
     scroll-margin-top: 64px;
   }

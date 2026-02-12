@@ -6,29 +6,28 @@ export default function MetricsSection() {
   return (
     <section className="relative bg-[linear-gradient(180deg,#FFFFFF_0%,#ECEFF2_100%)]">
       <div className="mx-auto w-full max-w-[1440px] px-6 py-16 md:px-12 md:py-24 xl:min-h-[1024px] xl:px-[189px] xl:pb-[120px] xl:pt-[200px]">
-        <div className="flex items-start">
-          <div className="reveal mr-[152px] whitespace-nowrap" data-reveal>
-            <h2 className="text-h2 leading-tight text-gray-500">
+        <div className="flex flex-col xl:flex-row xl:items-start">
+          <div className="reveal w-full xl:mr-[152px] xl:w-auto" data-reveal>
+            <h2 className="text-center text-h2 leading-tight text-gray-500 xl:text-left">
               재계약으로 증명된
-              <br />
-              인재 연결
+              <span className="xl:block"> 인재 연결</span>
             </h2>
             <div className="mb-7 mt-7 h-px w-full bg-gray-200" />
 
-            <ul className="space-y-3">
-              <li>
+            <ul className="grid grid-cols-3 gap-4 xl:block xl:space-y-3">
+              <li className="text-center xl:text-left">
                 <p className="text-[56px] leading-[1.02] font-bold text-gray-500">
                   200+
                 </p>
                 <p className="mt-1 text-body2 text-gray-300">누적 채용 인원</p>
               </li>
-              <li>
+              <li className="text-center xl:text-left">
                 <p className="text-[56px] leading-[1.02] font-bold text-gray-500">
                   90%
                 </p>
                 <p className="mt-1 text-body2 text-gray-300">기업 만족도</p>
               </li>
-              <li>
+              <li className="text-center xl:text-left">
                 <p className="text-[56px] leading-[1.02] font-bold text-gray-500">
                   90%
                 </p>
@@ -37,7 +36,7 @@ export default function MetricsSection() {
             </ul>
           </div>
 
-          <div className="w-[652px] space-y-3">
+          <div className="mt-8 w-full space-y-3 xl:mt-0 xl:w-[652px]">
             <article
               className="reveal group relative h-[132px] overflow-hidden rounded-2xl border border-white/50 shadow-[0_8px_22px_rgba(15,20,35,0.08)]"
               data-reveal
@@ -55,7 +54,7 @@ export default function MetricsSection() {
                   <br />
                   채용하면서 프로젝트 일정이 정상화됐습니다."
                 </p>
-                <p className="mt-3 text-caption  text-white/80">
+                <p className="mt-3 text-caption  text-white/50">
                   IoT SW 기업 J사 대표 박OO
                 </p>
               </div>
@@ -79,7 +78,7 @@ export default function MetricsSection() {
                   <br />
                   역량의 인재를 확보하니 부담이 크게 줄었습니다."
                 </p>
-                <p className="mt-3 text-caption  text-white/80">
+                <p className="mt-3 text-caption  text-white/50">
                   에듀케어 기업 BA 이사
                 </p>
               </div>
@@ -103,7 +102,7 @@ export default function MetricsSection() {
                   <br />
                   채용으로 팀 구성이 훨씬 유연해졌습니다."
                 </p>
-                <p className="mt-3 text-caption font-medium text-white/80">
+                <p className="mt-3 text-caption font-medium text-white/50">
                   웹 플랫폼 기업 TA 대표
                 </p>
               </div>
