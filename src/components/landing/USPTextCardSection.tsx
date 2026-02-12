@@ -23,7 +23,7 @@ const joinClassNames = (...classNames: Array<string | undefined>) => {
 
 export default function USPTextCardSection({
   sectionClassName = "bg-white",
-  wrapperClassName = "mx-auto w-full max-w-[1440px] px-6 pb-20 pt-20 md:px-12 md:pb-28 md:pt-28 xl:px-[189px] xl:pb-[253px] xl:pt-[252px]",
+  wrapperClassName = "mx-auto w-full max-w-[1440px] px-6 pb-20 pt-20 md:px-12 md:pb-28 md:pt-28 min-[1025px]:px-[189px] min-[1025px]:pb-[253px] min-[1025px]:pt-[252px]",
   rowClassName,
   textClassName = "max-w-[507px]",
   cardClassName,
@@ -42,7 +42,7 @@ export default function USPTextCardSection({
       <div className={wrapperClassName}>
         <article
           className={joinClassNames(
-            "mx-auto flex w-full flex-col gap-10 lg:max-w-[1062px] lg:flex-row lg:items-start lg:justify-between lg:gap-9",
+            "mx-auto flex w-full flex-col gap-10 min-[1025px]:max-w-[1062px] min-[1025px]:flex-row min-[1025px]:items-start min-[1025px]:justify-between min-[1025px]:gap-9",
             rowClassName,
           )}
         >
@@ -84,7 +84,7 @@ export default function USPTextCardSection({
 
           <div
             className={joinClassNames(
-              "reveal w-full shrink-0 lg:max-w-[519px]",
+              "reveal w-full shrink-0 min-[1025px]:max-w-[519px]",
               cardClassName,
             )}
             data-reveal

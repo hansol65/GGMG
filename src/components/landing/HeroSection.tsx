@@ -50,7 +50,7 @@ export default function HeroSection() {
       <div className="layout-desktop pt-[196px]">
         <div className="mx-auto text-center">
           <h1
-            className="reveal mt-3 text-h1 font-bold whitespace-normal break-keep xl:whitespace-nowrap"
+            className="reveal mt-3 text-h1 font-bold whitespace-normal break-keep min-[1025px]:whitespace-nowrap"
             data-reveal
           >
             글로벌 인재 구독으로 <br />
@@ -80,7 +80,7 @@ export default function HeroSection() {
       <div className="layout-desktop pt-[40px] ">
         <div className="mx-auto text-center">
           <h2
-            className="reveal text-h2 font-bold whitespace-normal break-keep xl:whitespace-nowrap"
+            className="reveal text-h2 font-bold whitespace-normal break-keep min-[1025px]:whitespace-nowrap"
             data-reveal
           >
             좋은 인재, 왜 이렇게 안 보일까요?
@@ -105,7 +105,7 @@ export default function HeroSection() {
             ))}
           </div>
           <h4
-            className="reveal mx-auto py-20 text-center text-h4 text-white whitespace-normal break-keep xl:whitespace-nowrap"
+            className="reveal mx-auto py-20 text-center text-h4 text-white whitespace-normal break-keep min-[1025px]:whitespace-nowrap"
             data-reveal
           >
             리스크를 줄이고, 성과는 높이는

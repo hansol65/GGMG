@@ -1,7 +1,7 @@
 export default function ContactCtaSection() {
   return (
     <section className="w-full text-white bg-[linear-gradient(180deg,#1D1F23_31.32%,#4269E9_207.83%)]">
-      <div className="layout-desktop flex min-h-[70vh] flex-col items-center justify-center py-20 text-center xl:min-h-[1024px]">
+      <div className="layout-desktop flex min-h-[70vh] flex-col items-center justify-center py-20 text-center min-[1025px]:min-h-[1024px]">
         <h2 className="reveal text-h1" data-reveal>
           공고 마감 지금 바로 시작하세요
         </h2>

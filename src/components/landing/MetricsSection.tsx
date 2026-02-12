@@ -4,30 +4,30 @@ import Say3 from "../../assets/image-say-3.png";
 
 export default function MetricsSection() {
   return (
-    <section className="relative bg-[linear-gradient(180deg,#FFFFFF_0%,#ECEFF2_100%)]">
-      <div className="mx-auto w-full max-w-[1440px] px-6 py-16 md:px-12 md:py-24 xl:min-h-[1024px] xl:px-[189px] xl:pb-[120px] xl:pt-[200px]">
-        <div className="flex flex-col xl:flex-row xl:items-start">
-          <div className="reveal w-full xl:mr-[152px] xl:w-auto" data-reveal>
-            <h2 className="text-center text-h2 leading-tight text-gray-500 xl:text-left">
+    <section className="metrics-section relative bg-[linear-gradient(180deg,#FFFFFF_0%,#ECEFF2_100%)]">
+      <div className="mx-auto w-full max-w-[1440px] px-6 py-16 md:px-12 md:py-24 min-[1025px]:min-h-[1024px] min-[1025px]:px-[189px] min-[1025px]:pb-[120px] min-[1025px]:pt-[200px]">
+        <div className="flex flex-col min-[1025px]:flex-row min-[1025px]:items-start min-[1025px]:justify-center min-[1025px]:gap-[152px]">
+          <div className="reveal w-full min-[1025px]:w-auto" data-reveal>
+            <h2 className="text-center text-h2 whitespace-nowrap leading-tight text-gray-500 min-[1025px]:text-left">
               재계약으로 증명된
-              <span className="xl:block"> 인재 연결</span>
+              <span className="min-[1025px]:block"> 인재 연결</span>
             </h2>
             <div className="mb-7 mt-7 h-px w-full bg-gray-200" />
 
-            <ul className="grid grid-cols-3 gap-4 xl:block xl:space-y-3">
-              <li className="text-center xl:text-left">
+            <ul className="grid grid-cols-3 gap-4 min-[1025px]:block min-[1025px]:space-y-3">
+              <li className="text-center min-[1025px]:text-left">
                 <p className="text-[56px] leading-[1.02] font-bold text-gray-500">
                   200+
                 </p>
                 <p className="mt-1 text-body2 text-gray-300">누적 채용 인원</p>
               </li>
-              <li className="text-center xl:text-left">
+              <li className="text-center min-[1025px]:text-left">
                 <p className="text-[56px] leading-[1.02] font-bold text-gray-500">
                   90%
                 </p>
                 <p className="mt-1 text-body2 text-gray-300">기업 만족도</p>
               </li>
-              <li className="text-center xl:text-left">
+              <li className="text-center min-[1025px]:text-left">
                 <p className="text-[56px] leading-[1.02] font-bold text-gray-500">
                   90%
                 </p>
@@ -36,7 +36,7 @@ export default function MetricsSection() {
             </ul>
           </div>
 
-          <div className="mt-8 w-full space-y-3 xl:mt-0 xl:w-[652px]">
+          <div className="mt-8 w-full space-y-3 min-[1025px]:mt-0 min-[1025px]:w-[652px]">
             <article
               className="reveal group relative h-[132px] overflow-hidden rounded-2xl border border-white/50 shadow-[0_8px_22px_rgba(15,20,35,0.08)]"
               data-reveal
@@ -48,7 +48,7 @@ export default function MetricsSection() {
               />
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,22,31,0.72)_0%,rgba(17,22,31,0.58)_45%,rgba(17,22,31,0.64)_100%)]" />
 
-              <div className="relative flex h-full flex-col items-center justify-center px-6 text-center text-white md:px-10">
+              <div className="relative flex h-full flex-col items-center justify-center px-6 text-center text-white md:px-10 md:whitespace-nowrap">
                 <p className="text-body1 leading-relaxed">
                   "공고를 올려도 지원자가 없었는데, 바로 투입 가능한 인재를
                   <br />

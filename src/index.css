@@ -73,7 +73,7 @@
     scroll-margin-top: 64px;
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1025px) {
     main > section:not(.hero-section) {
       min-height: 1024px;
     }

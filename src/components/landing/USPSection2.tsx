@@ -4,8 +4,8 @@ import USPVisualCard from "./USPVisualCard";
 
 const CostVisual = () => {
   return (
-    <USPVisualCard className="bg-gray-100 pt-[85px]">
-      <div className="mx-auto h-full w-[360px] rounded-xl bg-gray-400 pt-3 text-white shadow-lg px-5">
+    <USPVisualCard className="h-[420px] bg-gray-100 pt-10 md:h-[519px] md:pt-[85px]">
+      <div className="mx-auto h-full w-full max-w-[360px] rounded-xl bg-gray-400 px-5 pt-3 text-white shadow-lg">
         <div className="flex items-center gap-2">
           <span className="h-[10px] w-[10px] rounded-full bg-[#ff5f57]" />
           <span className="h-[10px] w-[10px] rounded-full bg-[#fdbb2e]" />
