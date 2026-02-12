@@ -3,6 +3,7 @@ import IconUser from "../../assets/icon_user.png";
 import IconLetterCheck from "../../assets/icon-letter-check.png";
 import IconSetting from "../../assets/icon-setting.png";
 import IconRightArrow from "../../assets/icon-arrow-right.png";
+import IconDownArrow from "../../assets/icon-color-arrow-down.svg";
 
 type ProcessCardProps = {
   icon?: string;
@@ -42,7 +43,7 @@ const OfficeCard = ({ title, subtitle }: OfficeCardProps) => {
   return (
     <div
       className="
-        aspect-201/248
+        aspect-[201/248]
         rounded-2xl
         flex flex-col items-center justify-center
         border-2 border-primary-400
@@ -60,12 +61,26 @@ const OfficeCard = ({ title, subtitle }: OfficeCardProps) => {
   );
 };
 
+type TabletProcessRowProps = {
+  icon: string;
+  label: string;
+};
+
+const TabletProcessRow = ({ icon, label }: TabletProcessRowProps) => {
+  return (
+    <div className="flex h-[90px] gap-5 w-full items-center bg-white/20 rounded-xl px-5">
+      <img src={icon} className="h-15 w-15 object-contain" />
+      <p className="text-gray-100 text-body2">{label}</p>
+    </div>
+  );
+};
+
 export default function ProcessSection() {
   return (
     <section className="w-full text-white bg-[linear-gradient(180deg,#1D1F23_31.32%,#4269E9_207.83%)]">
-      <div className="layout-desktop py-[140px] px-[114px]">
+      <div className="layout-desktop px-4 py-20 md:px-8 md:py-24 min-[1025px]:px-[114px] min-[1025px]:py-[140px]">
         {/* 타이틀 */}
-        <h1 className="text-center text-h1">
+        <h1 className="text-center text-[clamp(30px,5vw,48px)] font-bold leading-[1.4]">
           복잡한 현지 채용 과정도
           <span
             className="
@@ -79,7 +94,60 @@ export default function ProcessSection() {
           </span>
         </h1>
 
-        <div className="w-full mt-[160px]">
+        <div className="mt-14 w-full min-[1025px]:hidden">
+          <div className="mx-auto w-full max-w-[686px]">
+            <div className="flex items-start gap-6">
+              <div className="w-8 shrink-0 space-y-3">
+                <div className="mb-2.5 flex h-[141px] items-center justify-center rounded-md bg-[#8B99C2] text-white text-body2">
+                  3일
+                </div>
+
+                <div className="mb-2.5 flex h-[191px] flex-col items-center justify-center rounded-md bg-[#6C88D8] leading-tight text-white text-body2">
+                  <span>5일</span>
+                  <span>~</span>
+                  <span>7일</span>
+                </div>
+
+                <div className="flex flex-col items-center justify-center rounded-md bg-primary-500 leading-tight text-white h-[212px] text-body2">
+                  <span>1일</span>
+                  <span>~</span>
+                  <span>2일</span>
+                </div>
+              </div>
+
+              <div className="w-full max-w-[622px] space-y-2.5 md:space-y-3">
+                <TabletProcessRow
+                  icon={IconMail}
+                  label="리모트 채용 상담 신청"
+                />
+                <TabletProcessRow
+                  icon={IconUser}
+                  label="적합한 인재 POOL 추천"
+                />
+                <TabletProcessRow
+                  icon={IconLetterCheck}
+                  label="서류 검토 및 인터뷰 진행"
+                />
+                <TabletProcessRow icon={IconSetting} label="채용 온보딩 진행" />
+
+                <div className="flex justify-center my-4">
+                  <img
+                    src={IconDownArrow}
+                    alt=""
+                    className="w-25 animate-bounce"
+                  />
+                </div>
+
+                <div className="flex items-center justify-center rounded-xl border border-primary-300 bg-[#CAD7FE] text-gray-300 shadow-[0_0_18px_rgba(78,117,255,0.35)] h-[90px] text-h4">
+                  멋사 VN 오피스
+                  <span className="ml-1 text-h2 text-primary-500">출근</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-[160px] hidden w-full min-[1025px]:block">
           <div
             className="
               mx-auto
@@ -116,7 +184,7 @@ export default function ProcessSection() {
             <div className="col-span-1 flex items-center justify-center">
               <img
                 src={IconRightArrow}
-                className="w-12.5 h-25 animate-bounce-right"
+                className="w-12.5 animate-bounce-right"
               />
             </div>
 

@@ -42,18 +42,21 @@ export default function USPTextCardSection({
       <div className={wrapperClassName}>
         <article
           className={joinClassNames(
-            "mx-auto flex w-full flex-col gap-10 min-[1025px]:max-w-[1062px] min-[1025px]:flex-row min-[1025px]:items-start min-[1025px]:justify-between min-[1025px]:gap-9",
+            "mx-auto flex w-full flex-col items-center gap-10 min-[1025px]:max-w-[1062px] min-[1025px]:flex-row min-[1025px]:items-start min-[1025px]:justify-between min-[1025px]:gap-9",
             rowClassName,
           )}
         >
           <div
-            className={joinClassNames("reveal max-w-[500px]", textClassName)}
+            className={joinClassNames(
+              "reveal mx-auto w-full max-w-[500px] min-[1025px]:mx-0",
+              textClassName,
+            )}
             data-reveal
             style={textDelay ? { transitionDelay: textDelay } : undefined}
           >
             <span
               className={joinClassNames(
-                "inline-flex items-center justify-center gap-2.5 border border-gray-200 text-caption leading-[1.4] text-gray-400",
+                "inline-flex items-center justify-center gap-2.5 border border-gray-200 text-body2 text-gray-400",
                 badgeClassName,
               )}
             >
@@ -65,14 +68,14 @@ export default function USPTextCardSection({
             <p className="mt-5 text-body1 text-gray-300">{description}</p>
 
             {highlights.length > 0 && (
-              <ul className="mt-[114px] space-y-5 ">
+              <ul className="mt-10 flex w-full items-start text-center gap-4 space-y-0 whitespace-nowrap min-[1024px]:mt-[110px] min-[1024px]:block min-[1024px]:space-y-5 min-[1024px]:text-left">
                 {highlights.map((highlight, index) => (
                   <li
                     key={highlight}
                     className={
                       index === highlightedIndex
-                        ? "text-h3 text-gray-400"
-                        : "text-h3 text-gray-200"
+                        ? "min-w-0 flex-1 text-body2 leading-tight text-gray-400 md:max-[1023px]:text-body1 min-[1024px]:flex-none min-[1024px]:text-h3"
+                        : "min-w-0 flex-1 text-body2 leading-tight text-gray-200 md:max-[1023px]:text-body1 min-[1024px]:flex-none min-[1024px]:text-h3"
                     }
                   >
                     {highlight}
@@ -84,7 +87,7 @@ export default function USPTextCardSection({
 
           <div
             className={joinClassNames(
-              "reveal w-full shrink-0 min-[1025px]:max-w-[519px]",
+              "reveal mx-auto w-full max-w-[519px] shrink-0 min-[1025px]:mx-0",
               cardClassName,
             )}
             data-reveal
