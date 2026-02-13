@@ -5,18 +5,22 @@ import USPVisualCard from "./USPVisualCard";
 
 const DbVisual = () => {
   return (
-    <USPVisualCard className="bg-gray-100 py-10 px-10">
-      <div className="animate-pulse inline-flex items-center gap-3 rounded-xl bg-white px-5 py-4 shadow-md">
+    <USPVisualCard className="aspect-square h-auto bg-gray-100 p-[7.7%] md:h-[519px] md:p-10">
+      <div className="animate-pulse inline-flex items-center gap-2 rounded-xl bg-white px-[4.6%] py-[3.6%] shadow-md">
         <img
           src={IconStack}
           alt=""
-          className="h-[50px] w-[50px] object-contain"
+          className="h-[30px] w-[30px] md:h-[50px] md:w-[50px] object-contain"
         />
-        <span className="text-h3 text-primary-500">3000+ </span>
-        <span className="text-h4 text-gray-400">인재 DB</span>
+        <span className="text-[18px] font-semibold md:text-h3 text-primary-500">
+          3000+
+        </span>
+        <span className="text-[14px] font-semibold md:text-h4 text-gray-400">
+          인재 DB
+        </span>
       </div>
 
-      <div className="mt-12 h-[317px] overflow-hidden">
+      <div className="mt-[10.9%] aspect-[439/317] w-full overflow-hidden">
         <img src={Say1} className="h-full w-full object-cover" />
       </div>
     </USPVisualCard>

@@ -25,13 +25,13 @@ const TECH_ICONS = [
 
 const TrackVisual = () => {
   return (
-    <USPVisualCard className="py-16 bg-gray-100">
+    <USPVisualCard className="h-[420px] bg-gray-100 py-[52px] md:h-[519px] md:py-16">
       <div className="absolute inset-x-0 top-1/2 -translate-y-1/2">
-        <div className="animate-marquee-fast flex w-max items-center gap-[34px]">
+        <div className="animate-marquee-fast flex w-max items-center gap-6 md:gap-[34px]">
           {[...TECH_ICONS, ...TECH_ICONS].map((icon, index) => (
             <div
               key={`${icon}-${index}`}
-              className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-[#1f2229] p-3"
+              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#1f2229] p-2.5 md:h-16 md:w-16 md:p-3"
             >
               <img src={icon} className="h-full w-full object-contain" />
             </div>
@@ -39,7 +39,7 @@ const TrackVisual = () => {
         </div>
       </div>
 
-      <article className="relative mx-auto w-[304px] rounded-[22px] border border-gray-200 bg-white px-6 py-7 shadow-[0_12px_28px_rgba(0,0,0,0.12)]">
+      <article className="relative mx-auto w-[304px] max-w-[calc(100%-1rem)] origin-top scale-[0.81] rounded-[22px] border border-gray-200 bg-white px-6 py-7 shadow-[0_12px_28px_rgba(0,0,0,0.12)] md:max-w-none md:scale-100">
         <div className="flex items-center gap-4">
           <img
             src={IconPerson}
@@ -47,19 +47,26 @@ const TrackVisual = () => {
             className="h-16 w-16 rounded-full object-cover"
           />
           <div>
-            <p className="text-body1 text-primary-500">풀스택 개발자</p>
-            <p className="mt-1 text-body2 text-gray-400">3년차</p>
+            <p className="text-body1 text-primary-500">
+              풀스택 개발자
+            </p>
+            <p className="mt-1 text-body2 text-gray-400">
+              3년차
+            </p>
           </div>
         </div>
 
+        {/* 학력 */}
         <div className="mt-8 space-y-5">
           <div>
             <div className="flex items-start gap-4">
-              <span className="inline-flex rounded-lg border border-gray-200 px-2 py-1 text-caption text-gray-300">
+              <span className="inline-flex rounded-lg border border-gray-200 px-2 py-1 text-caption text-gray-300 whitespace-nowrap">
                 학력
               </span>
               <div>
-                <p className="text-caption text-gray-400">HUTECH 졸업</p>
+                <p className="text-caption text-gray-400">
+                  HUTECH 졸업
+                </p>
                 <p className="mt-1 text-caption text-gray-300">
                   (베트남 상위 5% 공대 컴공과)
                 </p>
@@ -67,21 +74,27 @@ const TrackVisual = () => {
             </div>
           </div>
 
+          {/* 경력  */}
           <div>
             <div className="flex items-start gap-4">
-              <span className="inline-flex rounded-lg border border-gray-200 px-2 py-1 text-caption text-gray-300">
+              <span className="inline-flex rounded-lg border border-gray-200 px-2 py-1 text-caption text-gray-300 whitespace-nowrap">
                 경력
               </span>
               <div>
                 <p className="text-caption text-gray-400">
                   B2C 웹서비스 개발 기업
                 </p>
-                <p className="text-caption text-gray-400">풀스택 개발자</p>
-                <p className="mt-1 text-caption text-gray-300">(2022 ~ 2025)</p>
+                <p className="text-caption text-gray-400">
+                  풀스택 개발자
+                </p>
+                <p className="mt-1 text-caption text-gray-300">
+                  (2022 ~ 2025)
+                </p>
               </div>
             </div>
           </div>
 
+          {/* 하드스킬 */}
           <div>
             <span className="inline-flex rounded-lg border border-gray-200 px-2 py-1 text-caption text-gray-300">
               하드 스킬

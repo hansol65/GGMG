@@ -47,24 +47,27 @@ export default function HeroSection() {
       style={{ backgroundImage: `url(${heroBackground})` }}
     >
       {/* --- HERO 콘텐츠 영역 --- */}
-      <div className="layout-desktop pt-[196px]">
+      <div className="layout-desktop pt-[220px] md:pt-[340px]">
         <div className="mx-auto text-center">
           <h1
-            className="reveal mt-3 text-h1 font-bold whitespace-normal break-keep min-[1025px]:whitespace-nowrap"
+            className="reveal text-[24px] font-bold whitespace-normal break-keep md:text-h1 min-[1025px]:whitespace-nowrap"
             data-reveal
           >
             글로벌 인재 구독으로 <br />
             비용 절감과 채용 성공을 한 번에
           </h1>
 
-          <p className="reveal mt-4 text-gray-200 text-h4" data-reveal>
+          <p
+            className="reveal mt-4 text-gray-200 text-[18px] md:text-h4"
+            data-reveal
+          >
             채용은 더 쉽게, 비용은 더 낮게
           </p>
 
           <button
             type="button"
             data-reveal
-            className="reveal mt-10 rounded-lg bg-primary-500 px-8 py-4 text-body1 text-white hover:bg-primary-400"
+            className="reveal mt-6 md:mt-10 rounded-lg bg-primary-500 px-5 py-3 md:px-8 md:py-4 text-[16px] font-semibold md:text-body1 text-white hover:bg-primary-400"
           >
             1:1 맞춤 상담 받기
           </button>
@@ -80,7 +83,7 @@ export default function HeroSection() {
       <div className="layout-desktop pt-[40px] ">
         <div className="mx-auto text-center">
           <h2
-            className="reveal text-h2 font-bold whitespace-normal break-keep min-[1025px]:whitespace-nowrap"
+            className="reveal text-[24px] whitespace-nowrap font-bold md:text-h2 font-bold whitespace-normal break-keep min-[1025px]:whitespace-nowrap"
             data-reveal
           >
             좋은 인재, 왜 이렇게 안 보일까요?
@@ -88,15 +91,19 @@ export default function HeroSection() {
         </div>
 
         {/* 롤링 카드 */}
-        <div className="mt-12 overflow-hidden">
-          <div className="flex w-max animate-marquee">
+        <div className="mt-10 md:mt-12 overflow-hidden">
+          {/* <div className="flex w-max gap-6"> */}
+          <div className="flex w-max animate-marquee gap-6">
             {[...cards, ...cards].map((card, i) => (
               <div
                 key={i}
-                className="mr-6 flex min-h-[192px] w-[325px] shrink-0 flex-col items-center justify-center gap-4 rounded-t-2xl bg-[linear-gradient(180deg,#282B30_0%,rgba(24,25,29,0)_100%)] p-7 text-center backdrop-blur-[2px]"
+                className="flex w-[200px] h-[154px] md:min-h-[192px] md:w-[325px] px-1 gap-4 shrink-0 flex-col items-center justify-center rounded-t-2xl bg-[linear-gradient(180deg,#282B30_0%,rgba(24,25,29,0)_100%)]  text-center backdrop-blur-[2px]"
               >
-                <img src={card.icon} className="h-16 w-16 object-contain" />
-                <p className="text-body1 text-gray-200">
+                <img
+                  src={card.icon}
+                  className="h-12 w-12 md:h-16 md:w-16 object-contain"
+                />
+                <p className="text-caption md:text-body1 text-gray-200">
                   {card.line1}
                   <br />
                   {card.line2}
@@ -105,7 +112,7 @@ export default function HeroSection() {
             ))}
           </div>
           <h4
-            className="reveal mx-auto py-20 text-center text-h4 text-white whitespace-normal break-keep min-[1025px]:whitespace-nowrap"
+            className="reveal mx-auto py-20 text-center text-[18px] font-semibold md:text-h4 text-white whitespace-normal break-keep min-[1025px]:whitespace-nowrap"
             data-reveal
           >
             리스크를 줄이고, 성과는 높이는

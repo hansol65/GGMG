@@ -8,7 +8,7 @@ export default function MetricsSection() {
       <div className="mx-auto w-full max-w-[1440px] px-6 py-16 md:px-12 md:py-24 min-[1025px]:min-h-[1024px] min-[1025px]:px-[189px] min-[1025px]:pb-[120px] min-[1025px]:pt-[200px]">
         <div className="flex flex-col min-[1025px]:flex-row min-[1025px]:items-start min-[1025px]:justify-center min-[1025px]:gap-[152px]">
           <div className="reveal w-full min-[1025px]:w-auto" data-reveal>
-            <h2 className="text-center text-h2 whitespace-nowrap leading-tight text-gray-500 min-[1025px]:text-left">
+            <h2 className="text-center text-[22px] font-bold md:text-h2 whitespace-nowrap leading-tight text-gray-500 min-[1025px]:text-left">
               재계약으로 증명된
               <span className="min-[1025px]:block"> 인재 연결</span>
             </h2>
@@ -16,19 +16,21 @@ export default function MetricsSection() {
 
             <ul className="grid grid-cols-3 gap-4 min-[1025px]:block min-[1025px]:space-y-3">
               <li className="text-center min-[1025px]:text-left">
-                <p className="text-[56px] leading-[1.02] font-bold text-gray-500">
+                <p className="text-[32px] md:text-[56px] leading-[1.02] font-bold text-gray-500">
                   200+
                 </p>
-                <p className="mt-1 text-body2 text-gray-300">누적 채용 인원</p>
+                <p className="mt-1 whitespace-nowrap text-body2 text-gray-300">
+                  누적 채용 인원
+                </p>
               </li>
               <li className="text-center min-[1025px]:text-left">
-                <p className="text-[56px] leading-[1.02] font-bold text-gray-500">
+                <p className="text-[32px] md:text-[56px] leading-[1.02] font-bold text-gray-500">
                   90%
                 </p>
                 <p className="mt-1 text-body2 text-gray-300">기업 만족도</p>
               </li>
               <li className="text-center min-[1025px]:text-left">
-                <p className="text-[56px] leading-[1.02] font-bold text-gray-500">
+                <p className="text-[32px] md:text-[56px] leading-[1.02] font-bold text-gray-500">
                   90%
                 </p>
                 <p className="mt-1 text-body2 text-gray-300">재계약 비율</p>
@@ -48,13 +50,12 @@ export default function MetricsSection() {
               />
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,22,31,0.72)_0%,rgba(17,22,31,0.58)_45%,rgba(17,22,31,0.64)_100%)]" />
 
-              <div className="relative flex h-full flex-col items-center justify-center px-6 text-center text-white md:px-10 md:whitespace-nowrap">
-                <p className="text-body1 leading-relaxed">
+              <div className="relative flex h-full flex-col items-center justify-center px-6 text-center text-white md:px-10">
+                <p className="text-body2 font-medium md:text-body1 leading-relaxed">
                   "공고를 올려도 지원자가 없었는데, 바로 투입 가능한 인재를
-                  <br />
                   채용하면서 프로젝트 일정이 정상화됐습니다."
                 </p>
-                <p className="mt-3 text-caption  text-white/50">
+                <p className="mt-3 font-normal text-caption text-white/50">
                   IoT SW 기업 J사 대표 박OO
                 </p>
               </div>
@@ -73,13 +74,12 @@ export default function MetricsSection() {
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,22,31,0.72)_0%,rgba(17,22,31,0.58)_45%,rgba(17,22,31,0.64)_100%)]" />
 
               <div className="relative flex h-full flex-col items-center justify-center px-6 text-center text-white">
-                <p className="text-body1">
+                <p className="text-body2 font-medium md:text-body1 leading-relaxed">
                   "비용 때문에 채용을 망설였는데 절반 수준 인건비로 비슷한
-                  <br />
                   역량의 인재를 확보하니 부담이 크게 줄었습니다."
                 </p>
-                <p className="mt-3 text-caption  text-white/50">
-                  에듀케어 기업 BA 이사
+                <p className="font-normal mt-3 text-caption text-white/50">
+                  커머스 기업 B사 고OO
                 </p>
               </div>
             </article>
@@ -97,13 +97,12 @@ export default function MetricsSection() {
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,22,31,0.72)_0%,rgba(17,22,31,0.58)_45%,rgba(17,22,31,0.64)_100%)]" />
 
               <div className="relative flex h-full flex-col items-center justify-center px-6 text-center text-white md:px-10">
-                <p className="text-body1 leading-relaxed">
+                <p className="text-body2 font-medium md:text-body1 leading-relaxed">
                   "국내 인재 시장에선 한계를 느끼고 있었는데 베트남 인재
-                  <br />
                   채용으로 팀 구성이 훨씬 유연해졌습니다."
                 </p>
-                <p className="mt-3 text-caption font-medium text-white/50">
-                  웹 플랫폼 기업 TA 대표
+                <p className="mt-3 text-caption font-normal text-white/50">
+                  웹 콘텐츠 기업 T사 대표 임OO
                 </p>
               </div>
             </article>

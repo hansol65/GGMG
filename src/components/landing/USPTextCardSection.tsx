@@ -63,19 +63,23 @@ export default function USPTextCardSection({
               {badge}
             </span>
 
-            <h3 className="mt-5 text-h2">{title}</h3>
+            <h3 className="md:mt-5 mt-3 text-[22px] font-bold md:text-h2">
+              {title}
+            </h3>
 
-            <p className="mt-5 text-body1 text-gray-300">{description}</p>
+            <p className="md:mt-5 mt-3 text-[14px] font-medium md:text-body1 text-gray-300">
+              {description}
+            </p>
 
             {highlights.length > 0 && (
-              <ul className="mt-10 flex w-full items-start text-center gap-4 space-y-0 whitespace-nowrap min-[1024px]:mt-[110px] min-[1024px]:block min-[1024px]:space-y-5 min-[1024px]:text-left">
+              <ul className="mt-10 flex w-full items-start text-center md:gap-4 space-y-0 whitespace-nowrap min-[1024px]:mt-[110px] min-[1024px]:block min-[1024px]:space-y-5 min-[1024px]:text-left">
                 {highlights.map((highlight, index) => (
                   <li
                     key={highlight}
                     className={
                       index === highlightedIndex
-                        ? "min-w-0 flex-1 text-body2 leading-tight text-gray-400 md:max-[1023px]:text-body1 min-[1024px]:flex-none min-[1024px]:text-h3"
-                        : "min-w-0 flex-1 text-body2 leading-tight text-gray-200 md:max-[1023px]:text-body1 min-[1024px]:flex-none min-[1024px]:text-h3"
+                        ? "min-w-0 flex-1 text-[12px] font-semibold md:text-body2 leading-tight text-gray-400 md:max-[1023px]:text-body1 min-[1024px]:flex-none min-[1024px]:text-h3"
+                        : "min-w-0 flex-1 text-[12px] font-semibold md:text-body2 leading-tight text-gray-200 md:max-[1023px]:text-body1 min-[1024px]:flex-none min-[1024px]:text-h3"
                     }
                   >
                     {highlight}
