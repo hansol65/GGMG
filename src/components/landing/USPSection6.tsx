@@ -10,7 +10,7 @@ const PEOPLE_IMAGES = [People1, People2, People3, People4, People5];
 
 const OpsVisual = () => {
   return (
-    <USPVisualCard className="bg-white p-0">
+    <USPVisualCard className="h-[420px] bg-white p-0 md:h-[519px]">
       <div className="relative h-full w-full">
         {PEOPLE_IMAGES.map((image, index) => (
           <img

@@ -70,7 +70,9 @@ const TabletProcessRow = ({ icon, label }: TabletProcessRowProps) => {
   return (
     <div className="flex h-[90px] gap-5 w-full items-center bg-white/20 rounded-xl px-5">
       <img src={icon} className="h-15 w-15 object-contain" />
-      <p className="text-gray-100 text-body2">{label}</p>
+      <p className="text-gray-100 text-[14px] font-semibold md:text-body2">
+        {label}
+      </p>
     </div>
   );
 };
@@ -138,9 +140,11 @@ export default function ProcessSection() {
                   />
                 </div>
 
-                <div className="flex items-center justify-center rounded-xl border border-primary-300 bg-[#CAD7FE] text-gray-300 shadow-[0_0_18px_rgba(78,117,255,0.35)] h-[90px] text-h4">
+                <div className="flex items-center justify-center rounded-xl border border-primary-300 bg-[#CAD7FE] text-gray-300 shadow-[0_0_18px_rgba(78,117,255,0.35)] h-[90px] text-[18px] font-semibold md:text-h4">
                   멋사 VN 오피스
-                  <span className="ml-1 text-h2 text-primary-500">출근</span>
+                  <span className="ml-1 text-[22px] font-bold md:text-h2 text-primary-500">
+                    출근
+                  </span>
                 </div>
               </div>
             </div>
