@@ -18,7 +18,7 @@ const OpsVisual = () => {
             src={image}
             alt=""
             className="people-slide-item absolute inset-0 h-full w-full object-cover"
-            style={{ animationDelay: `${index * 4}s` }}
+            style={{ animationDelay: `${index * 3}s` }}
           />
         ))}
       </div>
