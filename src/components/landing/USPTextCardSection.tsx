@@ -23,7 +23,7 @@ const joinClassNames = (...classNames: Array<string | undefined>) => {
 
 export default function USPTextCardSection({
   sectionClassName = "bg-white",
-  wrapperClassName = "mx-auto w-full max-w-[1440px] px-6 pb-20 pt-20 md:px-12 md:pb-28 md:pt-28 min-[1025px]:px-[189px] min-[1025px]:pb-[253px] min-[1025px]:pt-[252px]",
+  wrapperClassName = "mx-auto w-full max-w-[1440px] px-6 py-20 md:px-12 md:py-28 min-[1025px]:flex min-[1025px]:min-h-[1024px] min-[1025px]:items-center min-[1025px]:px-[189px] min-[1025px]:py-0",
   rowClassName,
   textClassName = "max-w-[507px]",
   cardClassName,

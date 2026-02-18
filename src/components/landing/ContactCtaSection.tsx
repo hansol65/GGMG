@@ -1,4 +1,10 @@
-export default function ContactCtaSection() {
+type ContactCtaSectionProps = {
+  onOpenContact: () => void;
+};
+
+export default function ContactCtaSection({
+  onOpenContact,
+}: ContactCtaSectionProps) {
   return (
     <section className="w-full text-white bg-[linear-gradient(180deg,#1D1F23_31.32%,#4269E9_207.83%)]">
       <div className="layout-desktop flex min-h-[70vh] flex-col items-center justify-center py-20 text-center min-[1025px]:min-h-[1024px]">
@@ -19,12 +25,14 @@ export default function ContactCtaSection() {
         >
           <button
             type="button"
+            onClick={onOpenContact}
             className="rounded-md bg-primary-500 px-4 py-2.5 text-caption md:px-8 md:py-4 md:text-body1 text-white"
           >
             1:1 맞춤 상담 받기
           </button>
           <button
             type="button"
+            onClick={onOpenContact}
             className="rounded-md bg-white px-4 py-2.5 text-caption md:px-8 md:py-4 md:text-body1 text-gray-500"
           >
             서비스 소개서 받아보기

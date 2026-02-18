@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect, useState } from "react";
 import SiteHeader from "./components/landing/SiteHeader";
 import HeroSection from "./components/landing/HeroSection";
 import USPSection1 from "./components/landing/USPSection1";
@@ -12,8 +12,14 @@ import PricingSection from "./components/landing/PricingSection";
 import ContactCtaSection from "./components/landing/ContactCtaSection";
 import SiteFooter from "./components/landing/SiteFooter";
 import MetricsSection from "./components/landing/MetricsSection";
+import ContactFormPanel from "./components/ContactFormPanel";
 
 function App() {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
+  const openContactModal = () => setIsContactModalOpen(true);
+  const closeContactModal = () => setIsContactModalOpen(false);
+
   useEffect(() => {
     const elements = document.querySelectorAll<HTMLElement>("[data-reveal]");
 
@@ -89,7 +95,16 @@ function App() {
       return index === -1 ? 0 : index;
     };
 
+    const isPricingSection = (section: HTMLElement | undefined) => {
+      return Boolean(section?.classList.contains("pricing-section"));
+    };
+
     const onWheel = (event: WheelEvent) => {
+      if (isContactModalOpen) {
+        event.preventDefault();
+        return;
+      }
+
       if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) {
         return;
       }
@@ -113,6 +128,13 @@ function App() {
       wheelAccumulated = 0;
 
       const currentIndex = getCurrentSectionIndex();
+      const currentSection = snapSections[currentIndex];
+
+      // On tablet/mobile, keep native scrolling behavior inside pricing section.
+      if (window.innerWidth < 1025 && isPricingSection(currentSection)) {
+        return;
+      }
+
       const targetIndex = Math.max(
         0,
         Math.min(snapSections.length - 1, currentIndex + direction),
@@ -138,11 +160,31 @@ function App() {
         window.cancelAnimationFrame(animationFrameId);
       }
     };
-  }, []);
+  }, [isContactModalOpen]);
+
+  useEffect(() => {
+    if (!isContactModalOpen) {
+      return;
+    }
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        closeContactModal();
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [isContactModalOpen]);
 
   return (
     <div className="min-h-screen">
-      <SiteHeader />
+      <SiteHeader onOpenContact={openContactModal} />
       <main>
         <HeroSection />
         <MetricsSection />
@@ -153,10 +195,24 @@ function App() {
         <USPSection5 />
         <USPSection6 />
         <ProcessSection />
-        <PricingSection />
-        <ContactCtaSection />
+        <PricingSection onOpenContact={openContactModal} />
+        <ContactCtaSection onOpenContact={openContactModal} />
       </main>
       <SiteFooter />
+
+      {isContactModalOpen && (
+        <div
+          className="fixed inset-0 z-[100] overflow-y-auto bg-black/85 px-4 py-8 md:py-10"
+          onClick={closeContactModal}
+        >
+          <div
+            className="flex min-h-full items-center justify-center"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <ContactFormPanel onClose={closeContactModal} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

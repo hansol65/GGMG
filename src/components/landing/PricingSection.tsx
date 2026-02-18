@@ -1,8 +1,12 @@
 import IconCheck from "../../assets/icon-check.svg";
 
-export default function PricingSection() {
+type PricingSectionProps = {
+  onOpenContact: () => void;
+};
+
+export default function PricingSection({ onOpenContact }: PricingSectionProps) {
   return (
-    <section className="bg-gray-100 py-16 md:py-20 min-[1025px]:py-28">
+    <section className="pricing-section bg-gray-100 py-16 md:py-20 min-[1025px]:py-28">
       <div className="layout-desktop">
         <h2 className="text-center text-h3 min-[1025px]:text-h2">
           요금제 안내
@@ -13,7 +17,7 @@ export default function PricingSection() {
 
         <div className="mx-auto mt-8 grid max-w-[640px] gap-4 min-[1025px]:mt-12 min-[1025px]:max-w-none min-[1025px]:grid-cols-3 min-[1025px]:gap-6">
           {/* 베이직 */}
-          <article className="flex min-h-[420px] flex-col rounded-2xl border border-gray-200 bg-white p-6 hover:bg-gray-50 min-[1025px]:min-h-[660px] min-[1025px]:p-10">
+          <article className="flex min-h-[420px] flex-col rounded-2xl bg-white p-6 hover:bg-gray-50 min-[1025px]:min-h-[660px] min-[1025px]:p-10">
             <h3 className="text-center text-[20px] font-semibold md:text-h3">
               베이직 플랜
             </h3>
@@ -48,14 +52,15 @@ export default function PricingSection() {
 
             <button
               type="button"
+              onClick={onOpenContact}
               className="w-full bg-gray-500 text-white hover:bg-gray-300 mt-10 rounded-xl py-4 text-body2"
             >
-              시작하기
+              도입 문의하기
             </button>
           </article>
 
           {/* 프로 */}
-          <article className="flex min-h-[420px] flex-col rounded-2xl border border-gray-200 bg-white p-6 hover:bg-gray-50 min-[1025px]:min-h-[660px] min-[1025px]:p-10">
+          <article className="flex min-h-[420px] flex-col rounded-2xl bg-white p-6 hover:bg-gray-50 min-[1025px]:min-h-[660px] min-[1025px]:p-10">
             <div className="flex items-center justify-center gap-2">
               <h3 className="text-center text-[20px] font-semibold md:text-h3">
                 프로 플랜
@@ -99,14 +104,15 @@ export default function PricingSection() {
 
             <button
               type="button"
+              onClick={onOpenContact}
               className="w-full bg-primary-500 text-white hover:bg-primary-400 mt-10 rounded-xl py-4 text-body2"
             >
-              시작하기
+              도입 문의하기
             </button>
           </article>
 
           {/* 프리미엄 */}
-          <article className="flex min-h-[420px] flex-col rounded-2xl border border-gray-200 bg-white p-6 hover:bg-gray-50 min-[1025px]:min-h-[660px] min-[1025px]:p-10">
+          <article className="flex min-h-[420px] flex-col rounded-2xl bg-white p-6 hover:bg-gray-50 min-[1025px]:min-h-[660px] min-[1025px]:p-10">
             <h3 className="text-center text-[20px] font-semibold md:text-h3">
               프리미엄 플랜
             </h3>
@@ -149,9 +155,10 @@ export default function PricingSection() {
 
             <button
               type="button"
+              onClick={onOpenContact}
               className="w-full bg-gray-500 text-white hover:bg-gray-300 mt-10 rounded-xl py-4 text-body2"
             >
-              시작하기
+              도입 문의하기
             </button>
           </article>
         </div>

@@ -5,8 +5,8 @@ import Say3 from "../../assets/image-say-3.png";
 export default function MetricsSection() {
   return (
     <section className="metrics-section relative bg-[linear-gradient(180deg,#FFFFFF_0%,#ECEFF2_100%)]">
-      <div className="mx-auto w-full max-w-[1440px] px-6 py-16 md:px-12 md:py-24 min-[1025px]:min-h-[1024px] min-[1025px]:px-[189px] min-[1025px]:pb-[120px] min-[1025px]:pt-[200px]">
-        <div className="flex flex-col min-[1025px]:flex-row min-[1025px]:items-start min-[1025px]:justify-center min-[1025px]:gap-[152px]">
+      <div className="mx-auto w-full max-w-[1440px] px-6 py-16 md:px-12 md:py-24 min-[1025px]:flex min-[1025px]:min-h-[1024px] min-[1025px]:items-center min-[1025px]:px-[189px] min-[1025px]:py-0">
+        <div className="mx-auto flex w-full flex-col min-[1025px]:w-fit min-[1025px]:flex-row min-[1025px]:items-start min-[1025px]:gap-[152px]">
           <div className="reveal w-full min-[1025px]:w-auto" data-reveal>
             <h2 className="text-center text-[22px] font-bold md:text-h2 whitespace-nowrap leading-tight text-gray-500 min-[1025px]:text-left">
               재계약으로 증명된

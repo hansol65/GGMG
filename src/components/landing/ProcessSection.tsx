@@ -80,7 +80,7 @@ const TabletProcessRow = ({ icon, label }: TabletProcessRowProps) => {
 export default function ProcessSection() {
   return (
     <section className="w-full text-white bg-[linear-gradient(180deg,#1D1F23_31.32%,#4269E9_207.83%)]">
-      <div className="layout-desktop px-4 py-20 md:px-8 md:py-24 min-[1025px]:px-[114px] min-[1025px]:py-[140px]">
+      <div className="layout-desktop px-4 py-20 md:px-8 md:py-24 min-[1025px]:flex min-[1025px]:min-h-[1024px] min-[1025px]:flex-col min-[1025px]:justify-center min-[1025px]:px-[114px] min-[1025px]:py-0">
         {/* 타이틀 */}
         <h1 className="text-center text-[clamp(30px,5vw,48px)] font-bold leading-[1.4]">
           복잡한 현지 채용 과정도
