@@ -8,8 +8,8 @@ import IconPerson from "../../assets/icon-person.png";
 import IconPython from "../../assets/icon-python.svg";
 import IconReact from "../../assets/icon-react.svg";
 import IconTs from "../../assets/icon-ts.svg";
-import USPTextCardSection from "./USPTextCardSection";
-import USPVisualCard from "./USPVisualCard";
+import USPTextCardSection from "../USPTextCardSection";
+import USPVisualCard from "../USPVisualCard";
 
 const TECH_ICONS = [
   IconTs,
@@ -47,12 +47,8 @@ const TrackVisual = () => {
             className="h-16 w-16 rounded-full object-cover"
           />
           <div>
-            <p className="text-body1 text-primary-500">
-              풀스택 개발자
-            </p>
-            <p className="mt-1 text-body2 text-gray-400">
-              3년차
-            </p>
+            <p className="text-body1 text-primary-500">풀스택 개발자</p>
+            <p className="mt-1 text-body2 text-gray-400">3년차</p>
           </div>
         </div>
 
@@ -64,9 +60,7 @@ const TrackVisual = () => {
                 학력
               </span>
               <div>
-                <p className="text-caption text-gray-400">
-                  HUTECH 졸업
-                </p>
+                <p className="text-caption text-gray-400">HUTECH 졸업</p>
                 <p className="mt-1 text-caption text-gray-300">
                   (베트남 상위 5% 공대 컴공과)
                 </p>
@@ -84,12 +78,8 @@ const TrackVisual = () => {
                 <p className="text-caption text-gray-400">
                   B2C 웹서비스 개발 기업
                 </p>
-                <p className="text-caption text-gray-400">
-                  풀스택 개발자
-                </p>
-                <p className="mt-1 text-caption text-gray-300">
-                  (2022 ~ 2025)
-                </p>
+                <p className="text-caption text-gray-400">풀스택 개발자</p>
+                <p className="mt-1 text-caption text-gray-300">(2022 ~ 2025)</p>
               </div>
             </div>
           </div>

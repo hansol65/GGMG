@@ -1,7 +1,7 @@
 import IconStack from "../../assets/icon-stack.png";
 import Say1 from "../../assets/image-say-1.png";
-import USPTextCardSection from "./USPTextCardSection";
-import USPVisualCard from "./USPVisualCard";
+import USPTextCardSection from "../USPTextCardSection";
+import USPVisualCard from "../USPVisualCard";
 
 const DbVisual = () => {
   return (

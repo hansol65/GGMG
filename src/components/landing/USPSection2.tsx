@@ -1,6 +1,6 @@
 import IconProfile from "../../assets/icon-profile.png";
-import USPTextCardSection from "./USPTextCardSection";
-import USPVisualCard from "./USPVisualCard";
+import USPTextCardSection from "../USPTextCardSection";
+import USPVisualCard from "../USPVisualCard";
 
 const CostVisual = () => {
   return (

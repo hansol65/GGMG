@@ -3,8 +3,8 @@ import People2 from "../../assets/image-peple-2.jpg";
 import People3 from "../../assets/image-people-3.jpg";
 import People4 from "../../assets/image-people-4.jpg";
 import People5 from "../../assets/image-people-5.jpg";
-import USPTextCardSection from "./USPTextCardSection";
-import USPVisualCard from "./USPVisualCard";
+import USPTextCardSection from "../USPTextCardSection";
+import USPVisualCard from "../USPVisualCard";
 
 const PEOPLE_IMAGES = [People1, People2, People3, People4, People5];
 

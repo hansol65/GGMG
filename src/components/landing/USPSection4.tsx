@@ -2,8 +2,8 @@ import IconUni1 from "../../assets/icon-uni-1.png";
 import IconUni2 from "../../assets/icon-uni-2.png";
 import IconUni3 from "../../assets/icon-uni-3.png";
 import IconUni4 from "../../assets/icon-uni-4.png";
-import USPTextCardSection from "./USPTextCardSection";
-import USPVisualCard from "./USPVisualCard";
+import USPTextCardSection from "../USPTextCardSection";
+import USPVisualCard from "../USPVisualCard";
 
 const SchoolsVisual = () => {
   return (
