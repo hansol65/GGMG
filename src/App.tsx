@@ -109,10 +109,6 @@ function App() {
         return;
       }
 
-      if (firstSnapSection && window.scrollY < firstSnapSection.offsetTop - 8) {
-        return;
-      }
-
       if (isLocked) {
         event.preventDefault();
         return;
@@ -126,6 +122,23 @@ function App() {
 
       const direction = wheelAccumulated > 0 ? 1 : -1;
       wheelAccumulated = 0;
+
+      if (firstSnapSection && window.scrollY < firstSnapSection.offsetTop - 8) {
+        const heroBottomY = window.scrollY + window.innerHeight;
+        const transitionLine =
+          firstSnapSection.offsetTop - Math.min(180, window.innerHeight * 0.2);
+
+        if (direction > 0 && heroBottomY >= transitionLine) {
+          isLocked = true;
+          event.preventDefault();
+
+          smoothScrollTo(firstSnapSection.offsetTop, () => {
+            isLocked = false;
+          });
+        }
+
+        return;
+      }
 
       const currentIndex = getCurrentSectionIndex();
       const currentSection = snapSections[currentIndex];
