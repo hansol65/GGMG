@@ -38,7 +38,7 @@ export default function USPSection6() {
           <span className="text-primary-500">안정적으로 운영</span>되는 관리체계
         </>
       }
-      description="현지 오피스 기반 출퇴근 관리와 상주 관리 체게를 통해 안정적인 운영을 지원해요"
+      description="현지 오피스 기반 출퇴근 관리와 상주 관리 체계를 통해 안정적인 운영을 지원해요"
     >
       <OpsVisual />
     </USPTextCardSection>
