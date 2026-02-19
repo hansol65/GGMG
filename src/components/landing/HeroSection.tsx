@@ -7,7 +7,11 @@ import IconFace4 from "../../assets/icon-face-4.png";
 import IconFace5 from "../../assets/icon-face-5.png";
 import IconFace6 from "../../assets/icon-face-6.png";
 
-export default function HeroSection() {
+type ContactCtaSectionProps = {
+  onOpenContact: () => void;
+};
+
+export default function HeroSection({ onOpenContact }: ContactCtaSectionProps) {
   const cards = [
     {
       icon: IconFace1,
@@ -66,6 +70,7 @@ export default function HeroSection() {
 
           <button
             type="button"
+            onClick={onOpenContact}
             data-reveal
             className="reveal mt-6 md:mt-10 rounded-lg bg-primary-500 px-5 py-3 md:px-8 md:py-4 text-[16px] font-semibold md:text-body1 text-white hover:bg-primary-400"
           >

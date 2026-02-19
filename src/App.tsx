@@ -186,7 +186,7 @@ function App() {
     <div className="min-h-screen">
       <SiteHeader onOpenContact={openContactModal} />
       <main>
-        <HeroSection />
+        <HeroSection onOpenContact={openContactModal} />
         <MetricsSection />
         <USPSection1 />
         <USPSection2 />
