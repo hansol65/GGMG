@@ -78,8 +78,8 @@ export default function USPTextCardSection({
                     key={highlight}
                     className={
                       index === highlightedIndex
-                        ? "min-w-0 flex-1 text-[12px] font-semibold md:text-body2 leading-tight text-gray-400 md:max-[1023px]:text-body1 min-[1024px]:flex-none min-[1024px]:text-h3"
-                        : "min-w-0 flex-1 text-[12px] font-semibold md:text-body2 leading-tight text-gray-200 md:max-[1023px]:text-body1 min-[1024px]:flex-none min-[1024px]:text-h3"
+                        ? "min-w-0 flex-1 text-[12px] font-semibold md:text-body1 lg:text-h3 leading-tight text-gray-400 lg:flex-none"
+                        : "min-w-0 flex-1 text-[12px] font-semibold md:text-body1 lg:text-h3 leading-tight text-gray-200 lg:flex-none"
                     }
                   >
                     {highlight}
